@@ -35,37 +35,21 @@ Genera una aplicación JavaFX para un restaurante, la pantalla de inicio (ver Fi
 
 **Componentes para la pantalla de inicio: **
 * BoderPane:
-
-   * BorderPane\_Top:
-
-     * AnchorPane:
-
-       *Label (Titulo del restaurante)
-
-   * BorderPane\_Left: (Vacio)
-
-   * BorderPane\_Center:
-
-     * HBox:
-
-       *VBox:
-
-         * Label (1 etiqueta por cada columna de la BD)
-
-       *VBox:
-
-         * TextField (1 campo de texto por cada columna de la BD)
-
-   * BorderPane\_Right (Vacio)
-
-   * BorderPane\_Bottom:
-
-     * AnchorPane:
-
-       *TableView:
-
-         *TableColumn (1 x cada columna de la BD)
-
+  * BorderPane\_Top:
+    * AnchorPane:
+      * Label (Titulo del restaurante)
+    * BorderPane\_Left: (Vacio)
+    * BorderPane\_Center:
+      * HBox:
+        * VBox:
+          * Label (1 etiqueta por cada columna de la BD)
+        * VBox:
+        * TextField (1 campo de texto por cada columna de la BD)
+    * BorderPane\_Right (Vacio)
+    * BorderPane\_Bottom:
+      * AnchorPane:
+        * TableView:
+          * TableColumn (1 x cada columna de la BD)
 
 
 Programa la tabla para que cuando el ítem seleccionado se le de click 2 veces, se abra una nueva ventana donde se podrá editar la información del platillo y al mismo tiempo observar la imagen que lo representa (ver Figura 2).
@@ -73,7 +57,16 @@ Programa la tabla para que cuando el ítem seleccionado se le de click 2 veces, 
 
 
 ! [Figura 2](Figura2.png)
-
+**Componentes para la pantalla de edición: **
+* AnchorPane
+  * VBox: 
+    * HBox:
+      * VBox:
+        * Label (1 etiqueta por cada columna de la BD) 
+      * VBox:
+        *  TextField (1 campo de texto por cada columna de la BD)
+    * ImageView
+    * Button 
 
 
 **Nota: ** Editar la información cambia el platillo en la base de datos y en la tabla de la ventana principal. Al mismo tiempo, programa la tabla para que cuando exista un ítem seleccionado al presionar la tecla de borrado (backspace) se muestre una alerta que confirme si el usuario quiere borrar el registro, solo si acepta el registro será borrado de la tabla y de la base de datos.
