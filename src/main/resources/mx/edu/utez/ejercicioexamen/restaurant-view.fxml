@@ -1,16 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="mx.edu.utez.ejercicioexamen.RestaurantController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!"/>
-</VBox>
+<BorderPane fx:controller="mx.edu.utez.ejercicioexamen.controllers.RestaurantController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <AnchorPane prefHeight="180.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tabla" prefHeight="200.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="tablaId" prefWidth="41.0" text="id" />
+                <TableColumn fx:id="tablaPlatillo" prefWidth="153.0" text="platillo" />
+                  <TableColumn fx:id="tablaDescripcion" prefWidth="197.0" text="descripcion" />
+                  <TableColumn fx:id="tablaImagen" prefWidth="85.0" text="imagen" />
+                  <TableColumn fx:id="tablaPrecio" prefWidth="71.0" text="precio" />
+                  <TableColumn fx:id="tablaEstado" prefWidth="49.0" text="estado" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="54.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="53.0" prefWidth="600.0" text="Cafeteria Utez" textFill="#9a6f6f">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <padding>
+                  <Insets bottom="25.0" />
+               </padding>
+            </Label>
+         </children></AnchorPane>
+   </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="146.0" prefWidth="183.0" spacing="20.0">
+               <children>
+                  <Label text="Platillo:" />
+                  <Label text="Descripción:" />
+                  <Label text="Imagen:" />
+                  <Label text="Precio:" />
+                  <Label text="Estado:" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="255.0" prefWidth="419.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="platillo" />
+                  <TextField fx:id="descripcion" />
+                  <TextField fx:id="imagen" />
+                  <TextField fx:id="precio" />
+                  <TextField fx:id="estado" />
+                  <Button mnemonicParsing="false" onAction="#registrarPlatillo" text="Registrar Platillo">
+                     <VBox.margin>
+                        <Insets left="280.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </VBox>
+         </children></HBox>
+   </center>
+</BorderPane>
